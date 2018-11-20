@@ -1,3 +1,24 @@
+@background_Blue:#2d8cf0; /* 背景蓝 */
+@linkClickBackground:#e8eaec; /* 点击链接背景效果颜色 */
+@backgroundWhiteMarginBottom:8px;
+
+.bg-blue, .bg-white {
+  text-align: center;
+  .van-icon {
+    font-size: 1.3em;
+  }
+  .icon {
+    font-size: 1.3em;
+  }
+}
+.bg-blue{
+  background-color: @background_Blue;
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+  margin-bottom: @backgroundWhiteMarginBottom;
+}
 .icon-btn{
   display: inline-block;
   width: 100%;
@@ -5,5 +26,5 @@
   padding: 10px 0;
 }
 .iconBtnBg{
-  background-color: #e8eaec;
+  background-color: @linkClickBackground;
 }

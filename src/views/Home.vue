@@ -74,6 +74,11 @@
         </van-col>
       </van-row>
     </div>
+
+    <div class="bg-white">
+      <GeneralPanel title="惠支付"></GeneralPanel>
+    </div>
+
   </div>
 </template>
 
@@ -83,11 +88,13 @@
     Row, Col
   } from 'vant'
   import IconTextButton from '@/components/IconTextButton'
+  import GeneralPanel from '@/components/GeneralPanel'
   export default {
     components: {
       [Row.name]: Row,
       [Col.name]: Col,
-      IconTextButton
+      IconTextButton,
+      GeneralPanel
     },
     data(){
       return{
@@ -102,20 +109,7 @@
   }
 </script>
 <style lang="less">
-  .bg-blue, .bg-white {
-    text-align: center;
-    .van-icon {
-      font-size: 1.3em;
-    }
-    .icon {
-      font-size: 1.3em;
-    }
-  }
-
   .bg-blue {
-    background-color: #2d8cf0;
-
-    color: #fff;
     .link{
       color: #fff;
       display: inline-block;
@@ -123,10 +117,5 @@
       height: 100%;
       padding: 15px 0 10px 0;
     }
-  }
-
-  .bg-white {
-    background-color: #fff;
-    margin-bottom: 5px;
   }
 </style>

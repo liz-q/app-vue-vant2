@@ -43,5 +43,5 @@
 </script>
 
 <style scoped lang="less">
-  .text{font-size: 12px;}
+  .text{font-size: 12px;color: #333;}
 </style>
