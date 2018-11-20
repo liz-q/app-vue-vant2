@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a class="icon-btn" :class="{iconBtnBg:icClick}" @click="clickIconTextBtn">
+    <a class="icon-btn" :class="{iconBtnBg:isClick}" @click="clickIconTextBtn">
       <van-icon :name="iconName"/>
-      <br>{{message}}
+      <br><span class="text">{{message}}</span>
     </a>
   </div>
 </template>
@@ -16,7 +16,7 @@
     },
     data() {
       return {
-        icClick: false,
+        isClick: false,
         timer: null
       }
     },
@@ -26,12 +26,12 @@
     methods: {
       clickIconTextBtn() {
         console.log(this.message);
-        this.icClick = true;
+        this.isClick = true;
         this._setTimeOut(100)
       },
       _setTimeOut(delayTime) {
         this.timer = setTimeout(() => {
-          this.icClick = false
+          this.isClick = false
         }, delayTime)
       }
     },
@@ -42,6 +42,6 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+  .text{font-size: 12px;}
 </style>
