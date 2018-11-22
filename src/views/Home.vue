@@ -104,7 +104,7 @@
       return{
         panelData:[
           {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/ditie.jpg')},
-          {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/ditie.jpg')}
+          {title:'赚钱红包升级',abstract:'1分赏金到手',imgUrl:require('../assets/imgs/hongbao.jpg')}
         ]
       }
     },

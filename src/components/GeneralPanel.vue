@@ -33,7 +33,7 @@
 </script>
 
 <style scoped lang="less">
-  @imgParentWidth:4rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
+  @imgParentWidth:4.5rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
 
   .title {
     font-size: 14px;
@@ -57,7 +57,7 @@
       width: 50%;
       float: left;
       position: relative;
-      padding: 20px 5px 20px 10px;
+      padding: 16px 5px 16px 10px;
       box-sizing: border-box;
       .item-left{
         margin-right: @imgParentWidth;
@@ -65,7 +65,7 @@
         display: flex;
         align-items: center;
         .item-title{
-          font-weight: bold;font-size: 14px;
+          font-weight: bold;font-size: 14px;color: #333;
         }
         .item-sub-title{
           color: #666;font-size: 12px;
