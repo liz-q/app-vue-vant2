@@ -33,7 +33,7 @@
 </script>
 
 <style scoped lang="less">
-  @imgParentWidth:4.5rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
+  @imgParentWidth:4rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
 
   .title {
     font-size: 14px;
@@ -68,7 +68,7 @@
           font-weight: bold;font-size: 14px;color: #333;
         }
         .item-sub-title{
-          color: #666;font-size: 12px;
+          color: #666;font-size: 10px;
         }
       }
       .item-right{
