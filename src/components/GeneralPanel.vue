@@ -36,7 +36,7 @@
   @imgParentWidth:4rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
 
   .title {
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
     text-align: left;
     padding: 10px 1em;
