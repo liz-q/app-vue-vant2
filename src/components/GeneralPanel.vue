@@ -2,7 +2,7 @@
   <div class="general-panel">
     <div class="title">
       <span class="main-title">{{title}}</span>
-      <span class="sub-title">{{subTitle || '副标题'}}</span>
+      <span class="sub-title">{{subTitle}}</span>
     </div>
 
     <div class="items">
