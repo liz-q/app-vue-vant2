@@ -76,7 +76,11 @@
     </div>
 
     <div class="bg-white">
-      <GeneralPanel title="惠支付"></GeneralPanel>
+      <GeneralPanel
+        title="惠支付"
+        subTitle="建行卡号"
+        :data="panelData"
+      ></GeneralPanel>
     </div>
 
   </div>
@@ -98,7 +102,10 @@
     },
     data(){
       return{
-
+        panelData:[
+          {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/ditie.jpg')},
+          {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/ditie.jpg')}
+        ]
       }
     },
     methods: {
