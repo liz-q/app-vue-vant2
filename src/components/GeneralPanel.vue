@@ -42,10 +42,10 @@
     padding: 10px 1em;
     .main-title {
       border-left: 3px solid #2d8cf0;
-      padding-left: 10px;
+      padding-left: 5px;
     }
     .sub-title {
-      padding-left: 10px;
+      padding-left: 3px;
       color: #888;
     }
   }
