@@ -78,8 +78,15 @@
     <div class="bg-white">
       <GeneralPanel
         title="惠支付"
-        subTitle="建行卡号"
+        subTitle=""
         :data="panelData"
+      ></GeneralPanel>
+    </div>
+    <div class="bg-white">
+      <GeneralPanel
+        title="生活服务"
+        subTitle="淘宝提供服务"
+        :data="panelData2"
       ></GeneralPanel>
     </div>
 
@@ -103,8 +110,12 @@
     data(){
       return{
         panelData:[
-          {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/ditie.jpg')},
+          {title:'签到领积分',abstract:'积分兑海量权益',imgUrl:require('../assets/imgs/img2.jpg')},
           {title:'赚钱红包升级',abstract:'1分赏金到手',imgUrl:require('../assets/imgs/hongbao.jpg')}
+        ],
+        panelData2:[
+          {title:'还敢欠电费？',abstract:'可能影响你贷款',imgUrl:require('../assets/imgs/img3.jpg')},
+          {title:'企业主看过来',abstract:'社保欠费追缴问题',imgUrl:require('../assets/imgs/img4.jpg')}
         ]
       }
     },
