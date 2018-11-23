@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="collect">
     <van-nav-bar
       title="收钱"
       left-text="返回"
@@ -62,9 +62,11 @@
 </script>
 
 <style lang="less">
-  .cont {
+  .collect{
     background-color: #2d8cf0;
-    height: 100vh;
+    height: 100%;
+  }
+  .cont {
     padding-top: 10px;
     .collect-wrap {
       width: 95vw;

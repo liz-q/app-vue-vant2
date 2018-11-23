@@ -34,6 +34,9 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-bottom: 60px;
+  height: calc(100% - (50px));
+  height: -moz-calc(100% - (50px));
+  height: -webkit-calc(100% - (50px));
+  padding-bottom: 50px;
 }
 </style>
