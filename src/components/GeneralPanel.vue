@@ -27,13 +27,13 @@
     props: {
       title: {type: String, required: true},
       subTitle: {type: String},
-      data:{type:Array,required: true}
+      data: {type: Array, required: true}
     }
   }
 </script>
 
 <style scoped lang="less">
-  @imgParentWidth:4rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
+  @imgParentWidth: 4rem; /* 图标的高度=图标的宽度=左侧文本内容的高度 */
 
   .title {
     font-size: 12px;
@@ -59,28 +59,32 @@
       position: relative;
       padding: 16px 5px 16px 10px;
       box-sizing: border-box;
-      .item-left{
+      .item-left {
         margin-right: @imgParentWidth;
         height: @imgParentWidth;
         display: flex;
         align-items: center;
-        .item-title{
-          font-weight: bold;font-size: 14px;color: #333;
+        .item-title {
+          font-weight: bold;
+          font-size: 14px;
+          color: #333;
         }
-        .item-sub-title{
-          color: #666;font-size: 10px;
+        .item-sub-title {
+          color: #666;
+          font-size: 10px;
         }
       }
-      .item-right{
+      .item-right {
         float: right;
         width: @imgParentWidth;
         height: @imgParentWidth;
-        img{
-          width: 100%;height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
         }
       }
 
-      &:before{
+      &:before {
         content: ' ';
         position: absolute;
         pointer-events: none;
@@ -92,8 +96,8 @@
         transform: scaleY(0.5);
         border-bottom: 1px solid #eee;
       }
-      &:nth-child(odd){
-        &:after{
+      &:nth-child(odd) {
+        &:after {
           content: ' ';
           position: absolute;
           pointer-events: none;
