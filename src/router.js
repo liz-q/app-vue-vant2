@@ -18,12 +18,20 @@ const routes = [
   },
   {
     name: 'collect',
+    path:'/collect',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ './views/Collect.vue'),
     meta:{
       title:'收钱'
+    }
+  },
+  {
+    name:'set-money',
+    component:() => import('./views/SetMoney.vue'),
+    meta:{
+      title:'设置金额'
     }
   }
 ];
