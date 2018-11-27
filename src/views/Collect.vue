@@ -131,6 +131,10 @@
           }
         }
       }
+      .link{
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
     }
   }
 
