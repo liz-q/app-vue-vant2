@@ -61,7 +61,11 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+  .van-cell{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
   .collect{
     background-color: #2d8cf0;
     height: 100%;
@@ -130,10 +134,6 @@
             padding-left: 1em;
           }
         }
-      }
-      .link{
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
       }
     }
   }
