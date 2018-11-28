@@ -13,7 +13,7 @@
         v-model="money"
         clearable
         label="金额"
-        @focus="show=true"
+        @focus="moneyInputFocus"
         @blur="show=false"
         @clear="clearMoney"
       />
@@ -79,6 +79,10 @@
     methods: {
       onClickLeft() {
         this.$router.push('/collect');
+      },
+      moneyInputFocus(e){
+        e.preventDefault();
+        this.show=true
       },
       onInput(value) {
         // 判断位数是否超过8位
