@@ -14,6 +14,8 @@
         clearable
         label="金额"
         type="Number"
+        @focus="moneyInputFocus"
+        @keyup="handleAmountChange"
         @clear="clearMoney"
       />
       <van-field
@@ -74,18 +76,20 @@
       }
     },
     mounted(){
-      // this.$refs.moneyInput.focus();
+      this.$refs.moneyInput.focus();
     },
     methods: {
       onClickLeft() {
         this.$router.push('/collect');
       },
-      moneyInputFocus(event){
-        console.log(event)
-        event.preventDefault()
-        console.log(1)
+      moneyInputFocus(){
         this.reasonFocus = false;
-        this.show=true
+
+      },
+      handleAmountChange(e){
+        if(!(/^-?\d+\.?\d{0,2}$/.test(e.target.value))){
+          e.target.value=e.target.value.substr(0,e.target.value.length-1)
+        }
       },
       onInput(value) {
         // 判断位数是否超过8位
