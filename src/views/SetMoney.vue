@@ -13,8 +13,7 @@
         v-model="money"
         clearable
         label="金额"
-        @focus="moneyInputFocus"
-        @blur="show=false"
+        type="Number"
         @clear="clearMoney"
       />
       <van-field
@@ -82,6 +81,7 @@
         this.$router.push('/collect');
       },
       moneyInputFocus(event){
+        console.log(event)
         event.preventDefault()
         console.log(1)
         this.reasonFocus = false;
