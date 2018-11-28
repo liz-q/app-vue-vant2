@@ -75,14 +75,15 @@
       }
     },
     mounted(){
-      this.$refs.moneyInput.focus();
+      // this.$refs.moneyInput.focus();
     },
     methods: {
       onClickLeft() {
         this.$router.push('/collect');
       },
-      moneyInputFocus(e){
-        e.preventDefault();
+      moneyInputFocus(event){
+        event.preventDefault()
+        console.log(1)
         this.reasonFocus = false;
         this.show=true
       },
