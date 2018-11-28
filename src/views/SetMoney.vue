@@ -82,6 +82,7 @@
       },
       moneyInputFocus(e){
         e.preventDefault();
+        alert(1);
         this.show=true
       },
       onInput(value) {
