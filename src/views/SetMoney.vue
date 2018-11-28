@@ -63,6 +63,7 @@
         money: '',
         reason: '',
         reasonShow: false,
+        reasonFocus:false,
         show: false, // 控制数字键盘显示
         btnDisabled:true, // 控制按钮禁用状态
         numConfig: {
@@ -82,7 +83,7 @@
       },
       moneyInputFocus(e){
         e.preventDefault();
-        alert(1);
+        this.reasonFocus = false;
         this.show=true
       },
       onInput(value) {
@@ -150,6 +151,7 @@
       },
       handleReasonShow(){
         this.reasonShow=true;
+        this.reasonFocus=true;
       },
       handleOk() {
         this.$router.push({
@@ -162,7 +164,7 @@
       }
     },
     updated(){
-      this.reasonShow && this.$refs.reasonInput.focus();
+      this.reasonFocus && this.$refs.reasonInput.focus();
     }
     // directives:{
     //   focus:{
