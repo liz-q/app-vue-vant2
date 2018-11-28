@@ -67,7 +67,7 @@
       }
     },
     mounted() {
-      const {money} = this.$route.query;
+      const {money,reason} = this.$route.query;
       this.setQrConfigValue(money);
     },
     computed: {
