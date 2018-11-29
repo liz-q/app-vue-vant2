@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import {Icon} from 'vant';
 import './assets/public.less'
+import BottomBar from '@/components/BottomBar'
 Vue.use(Icon);
+Vue.component('BottomBar',BottomBar);
 
 Vue.config.productionTip = false
 
