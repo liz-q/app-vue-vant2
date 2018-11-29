@@ -16,7 +16,6 @@
         type="Number"
         @focus="moneyInputFocus"
         @input="handleAmountInput"
-        @clear="clearMoney"
       />
       <van-field
         ref="reasonInput"
@@ -32,12 +31,6 @@
     <div class="btn">
       <van-button type="primary" :disabled="btnDisabled" size="large" @click="handleOk">确定</van-button>
     </div>
-    <van-number-keyboard
-      :show="show"
-      extra-key="."
-      @input="onInput"
-      @delete="onDelete"
-    />
   </div>
 </template>
 
@@ -87,61 +80,20 @@
 
       },
       handleAmountInput(e){
+        // 判断位数是否超过8位
+        if (this.money.length > 8)
+          return;
         if(! /^\d*(?:.\d{0,2})?$/.test(e)){
-          console.log('000')
           this.money = this.money.substr(0,this.money.length-1);
         }else{
           this.money = this.money;
         }
-      },
-      onInput(value) {
-        // 判断位数是否超过8位
-        if (this.money.length > 8)
-          return;
-
-        this.controlValue(value);
-
-        let temp = this.numConfig.num;
-        if(this.numConfig.point)
-          temp += `.${this.numConfig.dec}`;
-
         // 判断temp是否大于0，控制按钮禁用状态
-        if(Number(temp) === 0){
+        if(Number(this.money) <= 0){
           this.btnDisabled = true;
         }else{
           this.btnDisabled = false;
         }
-
-        this.money = temp
-      },
-      onDelete() {
-        this.money = ''
-      },
-      clearMoney(){
-        this.numConfig.num='';
-        this.numConfig.dec='';
-        this.numConfig.step=0;
-        this.numConfig.point=false;
-      },
-      controlValue(value) {
-        if (value === '.') {
-          this.numConfig.point = true;
-          return;
-        }
-        if (this.numConfig.point) {
-          // 点击点之后
-          if(this.numConfig.step === 0){
-            this.numConfig.dec += value;
-            this.numConfig.step ++
-          }else if(this.numConfig.step === 1){
-            this.numConfig.dec += value;
-            this.numConfig.step ++;
-          }
-        } else {
-          // 点击点之前
-          this.numConfig.num = this.numConfig.num + value;
-        }
-
       },
       formatMoney(){
         console.log(this.numConfig)
