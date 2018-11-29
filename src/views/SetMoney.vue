@@ -15,7 +15,7 @@
         label="金额"
         type="Number"
         @focus="moneyInputFocus"
-        @keyup="handleAmountChange"
+        @input="handleAmountInput"
         @clear="clearMoney"
       />
       <van-field
@@ -86,8 +86,13 @@
         this.reasonFocus = false;
 
       },
-      handleAmountChange(e){
-        e.target.value = (e.target.value.match(/^\d*(\.?\d{0,2})/g)[0]) || null
+      handleAmountInput(e){
+        if(! /^\d*(?:.\d{0,2})?$/.test(e)){
+          console.log('000')
+          this.money = this.money.substr(0,this.money.length-1);
+        }else{
+          this.money = this.money;
+        }
       },
       onInput(value) {
         // 判断位数是否超过8位
