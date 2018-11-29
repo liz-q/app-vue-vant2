@@ -127,6 +127,7 @@
         margin-bottom: 0;
         margin-top: 16px;
         .reason{
+          color: #333;
           padding-top: 5px;
           display: block;
           font-size: 14px;
