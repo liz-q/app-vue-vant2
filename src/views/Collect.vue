@@ -28,6 +28,7 @@
         </div>
         <p class="amt" v-if="amt!==''">
           {{getAmt}}
+          <span class="reason">{{reason}}</span>
         </p>
         <div class="action">
           <span v-if="amt===''" @click="setMoney">设置金额</span>
@@ -60,6 +61,7 @@
       return {
         noticeUrl: require('../assets/imgs/notic.png'),
         amt: '',
+        reason:'',
         qrConfig: {
           value: '',
           logo: require('../assets/logo.png')
@@ -68,6 +70,7 @@
     },
     mounted() {
       const {money,reason} = this.$route.query;
+      this.reason = reason;
       this.setQrConfigValue(money);
     },
     computed: {
@@ -93,6 +96,7 @@
       },
       clearMoney(){
         this.amt='';
+        this.reason = '';
         this.setQrConfigValue();
       }
     }
@@ -121,6 +125,12 @@
         text-align: center;
         font-size: 2em;
         margin-bottom: 0;
+        margin-top: 16px;
+        .reason{
+          padding-top: 10px;
+          display: block;
+          font-size: 14px;
+        }
       }
       .title {
         font-weight: normal;
