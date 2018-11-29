@@ -95,17 +95,19 @@
           this.btnDisabled = false;
         }
       },
-      formatMoney(){
-        console.log(this.numConfig)
-        let mid = parseInt(this.numConfig.num).toString();
-        if(this.numConfig.point){
-          let _dec = this.numConfig.dec;
-          while (_dec.length < 2) {
-            _dec += '0'
+      formatMoney() {
+        let mid = '';
+        if(this.money.indexOf('.') !== -1){
+          // 有点
+          const arr = this.money.split('.')
+          let [num,dec] = arr;
+          while (dec.length < 2) {
+            dec += '0'
           }
-          mid += `.${_dec}`
+          mid += `${num}.${dec}`
         }else{
-          mid += '.00'
+          // 无点
+          mid = `${parseInt(this.money).toString()}.00`;
         }
         return mid;
       },
