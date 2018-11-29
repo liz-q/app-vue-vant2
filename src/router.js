@@ -12,28 +12,51 @@ const routes = [
   {
     name: 'home',
     component: Home,
-    meta:{
-      title:'首页'
+    meta: {
+      title: '首页'
     }
   },
   {
     name: 'collect',
-    path:'/collect',
+    path: '/collect',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ './views/Collect.vue'),
-    meta:{
-      title:'收钱'
+    meta: {
+      title: '收钱'
     }
   },
   {
-    name:'set-money',
-    component:() => import('./views/SetMoney.vue'),
-    meta:{
-      title:'设置金额'
+    name: 'set-money',
+    component: () => import('./views/SetMoney.vue'),
+    meta: {
+      title: '设置金额'
+    }
+  },
+  {
+    name: 'wealth',
+    component: () => import('./views/Wealth.vue'),
+    meta: {
+      title: '财富'
+    }
+  },
+  {
+    name: 'order',
+    component: () => import('./views/Order.vue'),
+    meta: {
+      title: '订单'
+    }
+  },
+  {
+    name: 'mine',
+    component: () => import('./views/Mine.vue'),
+    meta: {
+      title: '我的'
     }
   }
+
+
 ];
 
 // add route path

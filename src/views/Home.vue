@@ -89,7 +89,7 @@
         :data="panelData2"
       ></GeneralPanel>
     </div>
-    <BottomBar></BottomBar>
+    <BottomBar />
   </div>
 </template>
 
