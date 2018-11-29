@@ -122,15 +122,14 @@
       border-radius: 4px;
       background-color: #fff;
       .amt {
-        color: #333;
         text-align: center;
         font-size: 2em;
         margin-bottom: 0;
         margin-top: 16px;
         .reason{
-          padding-top: 10px;
+          padding-top: 5px;
           display: block;
-          font-size: 12px;
+          font-size: 14px;
         }
       }
       .title {
