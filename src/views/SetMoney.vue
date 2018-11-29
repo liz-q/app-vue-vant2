@@ -87,9 +87,7 @@
 
       },
       handleAmountChange(e){
-        if(!(/^-?\d+\.?\d{0,2}$/.test(e.target.value))){
-          e.target.value=e.target.value.substr(0,e.target.value.length-1)
-        }
+        e.target.value = (e.target.value.match(/^\d*(\.?\d{0,2})/g)[0]) || null
       },
       onInput(value) {
         // 判断位数是否超过8位
