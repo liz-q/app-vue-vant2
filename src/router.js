@@ -14,7 +14,7 @@ const routes = [
     name:'christmas',
     component: () => import('./views/Christmas.vue'),
     meta:{
-      title: '圣诞节快乐...'
+      title: '圣诞节快乐'
     }
   },
   {
