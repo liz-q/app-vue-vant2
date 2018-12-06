@@ -41,7 +41,6 @@
     padding: 20px;
     .tableCell{
       .text1{
-        text-align: center;
         padding-bottom: 1em;
       }
     }
