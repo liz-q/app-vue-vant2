@@ -7,15 +7,7 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    // redirect: '/home'
-    redirect: '/christmas'
-  },
-  {
-    name:'christmas',
-    component: () => import('./views/Christmas.vue'),
-    meta:{
-      title: '圣诞节快乐'
-    }
+    redirect: '/home'
   },
   {
     name: 'home',
