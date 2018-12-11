@@ -5,7 +5,6 @@
 </template>
 <style>
 #app {
-  border: 1px solid #000;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
